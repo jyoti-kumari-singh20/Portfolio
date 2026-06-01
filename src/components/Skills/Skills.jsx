@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 const Skills = () => (
   <section
     id="skills"
-    className="py-24 pb-4 px-[11vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+    className="py-14 pb-4 px-[1vw] md:px-[7vw] lg:px-[10vw] font-sans bg-skills-gradient clip-path-custom"
   >
     {/* Section Title */}
     <div className="text-center mb-8">
@@ -18,32 +18,34 @@ const Skills = () => (
     </div>
 
     {/* Skill Categories */}
-    <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
-      {SkillsInfo.map((category) => (
-        <div
-          key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
-        >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-            {category.title}
-          </h3>
-
-          {/* Skill Items - 3 per row on larger screens */}
-          <Tilt
+    <div className="overflow-hidden w-full ">
+      <div className="flex gap-1 lg:gap-5 py-10 justify-between marquee">
+        {SkillsInfo.map((category) => (
+          <div
             key={category.title}
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
+            className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 
+          mb-1 min-w-[400px] min-h-[300px] sm:w-[48%] rounded-2xl border border-white 
+          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] "
           >
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
-  {category.skills.map((skill) => (
-    <div
-      key={skill.name}
-      className="
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
+              {category.title}
+            </h3>
+
+            {/* Skill Items - 3 per row on larger screens */}
+            <Tilt
+              key={category.title}
+              tiltMaxAngleX={20}
+              tiltMaxAngleY={20}
+              perspective={1000}
+              scale={1.05}
+              transitionSpeed={1000}
+              gyroscope={true}
+            >
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="
         flex flex-col items-center justify-center
         gap-1
         bg-transparent border-2 border-gray-700 rounded-3xl
@@ -51,21 +53,22 @@ const Skills = () => (
         text-center
         min-h-[60px] sm:min-h-[70px]
       "
-    >
-      <img
-        src={skill.logo}
-        alt={`${skill.name} logo`}
-        className="w-5 h-5 sm:w-7 sm:h-7 flex-shrink-0"
-      />
-      <span className="text-[10px] sm:text-xs text-gray-300 leading-snug text-center w-full break-normal hyphens-none">
-        {skill.name}
-      </span>
-    </div>
-  ))}
-</div>
-          </Tilt>
-        </div>
-      ))}
+                  >
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className="w-5 h-5 sm:w-7 sm:h-7 flex-shrink-0"
+                    />
+                    <span className="text-[10px] sm:text-xs text-gray-300 leading-snug text-center w-full break-normal hyphens-none">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </Tilt>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );

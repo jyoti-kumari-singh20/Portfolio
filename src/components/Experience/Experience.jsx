@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
+      className="py-24 pb-14 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -23,7 +23,7 @@ const Experience = () => {
         <div className="absolute left-6 top-0 w-1 bg-white h-full"></div>
 
         {/* Experience Entries */}
-        {experiences.map((experience, index) => (
+        {experiences.map((experience) => (
           <div
             key={experience.id}
             className="flex items-start mb-12 relative"

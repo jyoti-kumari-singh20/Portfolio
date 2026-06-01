@@ -28,7 +28,7 @@ import nit from './assets/education_logo/NITLogo.png';
 // Project Section Logo's
 import texttospeech from './assets/work_logo/texttospeech.png';
 import imagesearchLogo from './assets/work_logo/image_search.png';
-
+import tracker from "./assets/work_logo/RealTimeTracker.png";
 
 export const SkillsInfo = [
   {
@@ -123,6 +123,16 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
+      title: "Real Time Tracker",
+      description:
+        "Developed a real-time tracking application that provides live location and movement updates using WebSockets, enabling instant synchronization between users and devices with an interactive map interface.",
+      image: tracker,
+      tags: ["React.js","Node.js","Express.js","Socket.IO","JavaScript","WebSockets","REST API"],
+      github: "https://github.com/jyoti-kumari-singh20/RealTime-Tracker",
+      webapp: "https://real-time-tracker-steel.vercel.app/",
+    },
+    {
+      id: 1,
       title: "Text-to-Speech Converter",
       description:
         "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
@@ -132,7 +142,7 @@ export const SkillsInfo = [
       webapp: "https://text-to-speech-beryl-eight.vercel.app/",
     },
     {
-      id: 1,
+      id: 2,
       title: "Image Search App",
       description:
         "A javascript image search application that allows users to search high-quality images from the web. Built using external APIs to ensure a vast library of results for various queries.",
